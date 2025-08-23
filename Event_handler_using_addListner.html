@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_Handler_By_addListener</title>
+</head>
+<body>
+    <button id="btn-make-blue" >Download</button>
+    <br>
+    
+    <script>
+         document.getElementById('btn-make-blue').addEventListener('click',function makeBlue(){
+             document.body.style.backgroundColor='blue';
+         })
+          document.getElementById('btn-make-blue').addEventListener('dblclick',function makeBlue(){
+             document.body.style.backgroundColor='green';
+         })
+         
+    </script>
+</body>
+</html>
