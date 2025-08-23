@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_Handler_By_Id_Name</title>
+</head>
+<body>
+    <button id="btn-make-blue">Download</button>
+    <br>
+    <button onclick="makeYellow()">Contact</button>
+    <script>
+       const btnMakeBlue =document.getElementById('btn-make-blue');
+        btnMakeBlue.onclick=function() {
+            document.body.style.backgroundColor='Blue';
+        }
+         function makeYellow()
+        {
+            document.body.style.background='yellow';
+        }
+    </script>
+</body>
+</html>
