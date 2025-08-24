@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Text Using addEventListener</title>
+</head>
+<body>
+    <p id="name">My Name</p>
+    <input type="text"  id="input-value" placeholder="Enter Your Name">
+    <button id="btn-update">update</button>
+    <script>
+        document.getElementById('btn-update')
+          .addEventListener('click',function()
+            {
+                 const inputValue=document.getElementById('input-value');
+                 const valuei=inputValue.value;
+                 const getName=document.getElementById('name');
+                 getName.innerText = valuei;
+            }
+          )
+    </script>
+</body>
+</html>
