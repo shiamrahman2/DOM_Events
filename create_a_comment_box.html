@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create A Comment Box</title>
+    <style>
+        .comment{
+            color:black;
+            border:3px solid bisque;
+            border-radius:5px;
+            margin:10px;
+            padding:8px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>All Comment Are Here</h1>
+        <div id="parent-comment">
+            <p class="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae cum quibusdam quaerat ducimus optio quis aut quisquam minus. Deleniti, voluptatem!</p>
+            <p class="comment">Aperiam impedit, qui doloremque hic distinctio assumenda deleniti omnis modi cumque aliquid amet reiciendis dolorum dolor? Illum accusamus minus pariatur.</p>
+            <p class="comment">Iure dolore reiciendis placeat possimus at vel officia, maiores cum sapiente soluta explicabo perferendis consectetur sint vero voluptate, velit provident.</p>
+            
+        </div>
+
+        <textarea name="" id="text-value" cols="60" rows="5"></textarea><br>
+            <button id="btn-update-comment">Post Comment</button>
+    </section>
+    <script>
+          document.getElementById('btn-update-comment')
+            .addEventListener('click',function() {
+                const textValue = document.getElementById('text-value');
+                const newComment=textValue.value;
+                // console.log(newComment);
+
+                const parentComment=document.getElementById('parent-comment');
+
+                const newElement=document.createElement('p');
+                   newElement.classList.add('comment');
+                newElement.innerText=newComment;
+                parentComment.appendChild(newElement);
+                textValue.value='';
+            })
+    </script>
+</body>
+</html>
