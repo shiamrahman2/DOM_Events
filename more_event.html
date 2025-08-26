@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More_Event</title>
+</head>
+<body>
+    <button id="btn-primary">Mouse</button>
+
+    <input type="text" placeholder="your name" id="input-text"><br>
+    <input type="email" name="" id="input-email" placeholder="your email">
+
+    <script>
+        // document.getElementById('btn-primary')
+        //   .addEventListener('mouseenter',function(){
+        //     console.log('mouse enter');
+        //   })
+
+        // document.getElementById('btn-primary')
+        //   .addEventListener('mousemove',function(){
+        //     console.log('mouse move');
+        //   })
+
+        // document.getElementById('btn-primary')
+        //   .addEventListener('mouseout',function(){
+        //     console.log('mouse out');
+        //   })
+
+    //    document.getElementById('input-text')
+    //       .addEventListener('focus',function(){
+    //         console.log('focus');
+    //       })
+
+    //       document.getElementById('input-email')
+    //       .addEventListener('blur',function(){
+    //         console.log('typeing complete');
+    //       })
+
+      document.getElementById('input-email')
+          .addEventListener('keydown',function(){
+            console.log('typing');
+          })
+
+        document.getElementById('input-text')
+          .addEventListener('keyup',function(event){
+            console.log('typing comple',event.target.value);
+          })  
+         
+    </script>
+</body>
+</html>
