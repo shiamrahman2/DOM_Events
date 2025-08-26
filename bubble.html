@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+    <style>
+           section{
+                 border:1px solid red;
+                 border-radius:5px;
+              }
+              h1
+              {
+                   border:1px solid green;
+                 border-radius:5px;
+              }
+              div
+              {
+                 border:1px solid yellow;
+                 border-radius:5px;
+              }
+              ol{
+                border:1px solid white;
+                 border-radius:5px;
+              }
+              li{
+                border:1px solid purple;
+                 border-radius:5px;
+              }
+    </style>
+   
+
+</head>
+<body>
+    <section>
+        <h1>all My List</h1>
+        <div id="all-item-div">
+            <h3>here is the list</h3>
+              <ol id="item-container">
+                <li id="item-1">Item 1</li>
+                <li id="item-2">Item 2</li>
+                <li id="item-3">Item 3</li>
+                <li id="item-4">Item 4</li>
+                <li id="item-5">Item 5</li>
+              </ol>
+        </div>
+    </section>
+    <script>
+        document.getElementById('item-2')
+        .addEventListener('click',function(event){
+            console.log('item-2 first click');
+               event.stopPropagation();
+        })
+        document.getElementById('item-2')
+        .addEventListener('click',function(){
+            console.log('item-2 second click');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2')
+        .addEventListener('click',function(){
+            console.log('item-2 third click');
+        })
+        document.getElementById('item-container')
+        .addEventListener('click',function(){
+            console.log('item-container click');
+        })
+         document.getElementById('all-item-div')
+        .addEventListener('click',function(){
+            console.log('div click');
+        })
+    </script>
+</body>
+</html>
